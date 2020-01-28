@@ -1,27 +1,30 @@
 # get last and/or list of events on user's github profile
 
-# test api request
-# save the result to json
-# use that to display the events on html
-# Test how to parse it into objects
-
+# api request > get json > parse json = json response is now a dictionary
+# extract actor and others
 import requests
 import json
+import pprint
 
 API_URL = 'https://api.github.com'
 
 response = requests.get( API_URL + '/users/ltx-dev/events')
-parsed_response = json.loads(response.text)
+parsed_response = json.loads(response.text) # loads deserializes json
 
-print(json.dumps(parsed_response, indent=4, sort_keys=True))
-print(parsed_response[2]['type'])
-print(parsed_response[2]['actor']['url'])
+pp = pprint.PrettyPrinter(indent=4)
 
+class Event:
+    def __init__(self, actor, type, created_at):
+        self.actor = actor
+        self.type = type
+        self.created_at = created_at
 
-# class Test(object):
-# 	def __init__(self, data):
-# 		self.__dict__ = json.loads(data)
+actor = parsed_response[0]['actor']
+type1 = parsed_response[0]['type']
+created_at = parsed_response[0]['created_at']
 
+event1 = Event(actor, type1, created_at)
 
-# test1 = Test(parsed_response[0])
-# print(test1.actor)
+print(event1.actor)
+print(event1.type)
+print(event1.created_at)
