@@ -1,7 +1,6 @@
 # get last and/or list of events on user's github profile
 
 # api request > get json > parse json = json response is now a dictionary
-# extract actor and others
 import requests
 import json
 import pprint
@@ -24,7 +23,13 @@ type1 = parsed_response[0]['type']
 created_at = parsed_response[0]['created_at']
 
 event1 = Event(actor, type1, created_at)
+event_list = []    
 
-print(event1.actor)
-print(event1.type)
-print(event1.created_at)
+for element in parsed_response:
+    event_list.append(Event(element['actor'], element['type'], element['created_at']))
+
+print(event_list.type)
+
+# print(event1.actor)
+# print(event1.type)
+# print(event1.created_at)
