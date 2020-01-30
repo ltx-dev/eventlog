@@ -17,4 +17,8 @@ class ApiCall:
         
         return parsed_response            
 
-            
+#
+# Found out a hacky way to get some of the events on stackoverflow.
+# apistackexchange.com/2.2/users/3485221/{answers,comments}?site=stackoverflow&filter=withbody
+# the above call will get all the available events through /users/ endpoint (check api docs for more)
+#          
