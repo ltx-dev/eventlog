@@ -1,0 +1,2 @@
+class GithubItem:
+	pass
