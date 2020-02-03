@@ -1,6 +1,3 @@
-#
-# class ApiCall -> return json -> parse json -> create an event list item
-#
 from apicall import *
 import pprint
 
@@ -10,4 +7,5 @@ import pprint
 
 gh = ApiCall.call('github')
 pp = pprint.PrettyPrinter(indent=4)
-pp.print(gh)
+pp.pprint(gh)
+
