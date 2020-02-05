@@ -1,2 +1,3 @@
 class Event:
-	pass
+	def __init__():
+		pass
