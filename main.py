@@ -11,9 +11,9 @@ import pprint
 # serve event object on website
 #
 
-# gh = ApiCall.call('github')
-# pp = pprint.PrettyPrinter(indent=4)
-# # pp.pprint(gh)
+gh = ApiCall.call('github')
+pp = pprint.PrettyPrinter(indent=4)
+pp.pprint(gh)
 
-gh = ApiCall.call('so')
+# gh = ApiCall.call('so')
 

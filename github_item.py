@@ -1,8 +1,12 @@
 #
-# Make it so it has one, shared attribute with other items called"content"
+# Implement some sort of parser?
 #
 class GithubItem:
-    def __init__(self, event_type, payload):
-        self.event_type = event_type
-        self.payload = payload
-        # print(f"{__class__.__name__} created!")
+    def __init__(self, content):
+        # TODO, parser here:
+        # - created_at
+        # - link (repo -> url)
+        # - actor (display login)
+        # - type (event name)
+        # - description(commit message)
+        print(f"{__class__.__name__} created!")
