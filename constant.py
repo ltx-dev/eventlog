@@ -1,5 +1,5 @@
 #
-# Github contants
+# Github constants
 #
 GITHUB_API = 'https://api.github.com'
 GITHUB_USER_EVENTS = '/users/ltx-dev/events' # events from my own repo for the time being

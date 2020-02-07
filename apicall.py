@@ -12,7 +12,6 @@ class ApiCall:
     def call(api_source):
         api_item = ""
         if api_source == 'so':
-            # response = requests.get('https://api.stackexchange.com/users/3485221/answers?site=stackoverflow')
             response = requests.get(constant.STACKEXCHANGE_API + constant.SE_POSTS)
             parsed_response = json.loads(response.text)
             api_item = StackOverflowItem(parsed_response['items'][0]) # to do next

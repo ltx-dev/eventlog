@@ -3,12 +3,14 @@ import pprint
 
 #
 # On script usage:
-# Create event object
-# Create ApiCall object and make calls to available apis
-# Extract json into <name_here>_item object
-# unify it in to one format in json (eg: even type, event information, user information)
+# Create event object DONE
+# Create ApiCall object and make calls to available apis DONE
+# Extract json into <name_here>_item object DONE
+# unify it in to one format in json (eg: even type, event information, user information) DONE
+# implement event class
 # append it to event object 
-# serve event object on website
+# parse event object to json
+# serve event object on website (as json?)
 #
 
 # gh = ApiCall.call('github')
