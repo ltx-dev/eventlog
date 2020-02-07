@@ -18,9 +18,8 @@ class ApiCall:
             # api_item = StackOverflowItem() # to do next
         elif api_source == 'github':
             response = requests.get(constant.GITHUB_API + constant.GITHUB_USER_EVENTS)
-            parsed_response = json.loads(response.text)        
-            # temporaly it only extracts first item from the parsed json response, todo, extract all the events into objects and append them to event class    
-            api_item = GithubItem(parsed_response[0]['type'], parsed_response[0]['payload']) 
+            parsed_response = json.loads(response.text)                
+            api_item = GithubItem(parsed_response[0]) 
             
         return api_item
 

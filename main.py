@@ -12,8 +12,9 @@ import pprint
 #
 
 gh = ApiCall.call('github')
-pp = pprint.PrettyPrinter(indent=4)
-pp.pprint(gh)
+# pp = pprint.PrettyPrinter(indent=4)
+# pp.pprint(gh)
+print(gh.actor)
 
 # gh = ApiCall.call('so')
 
