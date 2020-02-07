@@ -15,12 +15,3 @@ class GithubItem:
         self.event_type = content['type']
         self.description = content['payload']['commits'][0]['message']
         print(f"{__class__.__name__} created!")
-
-
-    def print_all():
-        print("Print called")
-        print(self.created_at)        
-        print(self.link)        
-        print(self.actor)        
-        print(self.type)        
-        print(self.description)        

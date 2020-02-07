@@ -11,10 +11,10 @@ import pprint
 # serve event object on website
 #
 
-gh = ApiCall.call('github')
+# gh = ApiCall.call('github')
 # pp = pprint.PrettyPrinter(indent=4)
 # pp.pprint(gh)
-print(gh.actor)
+# print(gh.actor)
 
-# gh = ApiCall.call('so')
-
+# so = ApiCall.call('so')
+# print(so.link)

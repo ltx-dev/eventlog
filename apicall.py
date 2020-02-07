@@ -13,9 +13,9 @@ class ApiCall:
         api_item = ""
         if api_source == 'so':
             # response = requests.get('https://api.stackexchange.com/users/3485221/answers?site=stackoverflow')
-            response = requests.get('https://api.stackexchange.com/users/3485221/reputation-history?site=stackoverflow')
+            response = requests.get(constant.STACKEXCHANGE_API + constant.SE_POSTS)
             parsed_response = json.loads(response.text)
-            # api_item = StackOverflowItem() # to do next
+            api_item = StackOverflowItem(parsed_response['items'][0]) # to do next
         elif api_source == 'github':
             response = requests.get(constant.GITHUB_API + constant.GITHUB_USER_EVENTS)
             parsed_response = json.loads(response.text)                
